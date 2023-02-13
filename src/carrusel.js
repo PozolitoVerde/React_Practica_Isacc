@@ -10,12 +10,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const items = [
   {
-    src: require('./imgs/calle.jpg'),
-    altText: 'Hable ahora o calle para siempre',
-    caption: 'Patricio y bob'
+    src: require('./imgs/1.jpg'),
+    altText: 'Flor 1',
+    caption: 'Esta Bonito'
   },
   {
-    src: require('./imgs/amongla.gif'),
+    src: require('./imgs/2.jpg'),
     altText: 'Among US',
     caption: 'Amogus hablando'
   },

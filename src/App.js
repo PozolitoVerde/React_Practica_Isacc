@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import img from "./imgs/fotopro.jpeg";
+import img from "./imgs/foto.jpeg";
 import { useState } from "react";
 import Carrusel from "./carrusel";
 import GoogleMap from './mapsAPI'
@@ -20,7 +20,7 @@ function Home() {
 function Nombre() {
   return(
   <div className="nombre-wrapper">
-    <h1 className="nombre">Uriel González</h1>
+    <h1 className="nombre">Renteria Meza Angel Eduardo</h1>
   </div>
   )
 }
