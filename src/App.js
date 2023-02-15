@@ -85,7 +85,14 @@ function App() {
           }
         </ul>
       </nav>
-      
+      {/* <div className="btn-group">
+         <Link to="/Inicio" className="btn btn-dark">
+          INICIO
+          </Link>
+          <Link to="/Alumno" className="btn btn-dark">
+          ALUMNO
+         </Link>      
+        </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nombre" element={<Nombre />} />

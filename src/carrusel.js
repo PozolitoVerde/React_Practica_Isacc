@@ -16,13 +16,13 @@ const items = [
   },
   {
     src: require('./imgs/2.jpg'),
-    altText: 'Among US',
-    caption: 'Amogus hablando'
+    altText: 'Flor 2 esta bonita',
+    caption: 'el ppe'
   },
   {
-    src: require('./imgs/colonia_royale.jpg'),
-    altText: 'Colonia clash royale',
-    caption: 'Colonia royale'
+    src: require('./imgs/3.jpg'),
+    altText: 'Flor 3',
+    caption: 'Ayy miguel'
   }
 ];
 
