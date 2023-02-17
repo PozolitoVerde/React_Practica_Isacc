@@ -11,18 +11,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const items = [
   {
     src: require('./imgs/1.jpg'),
-    altText: 'Flor 1',
-    caption: 'Esta Bonito'
+    altText: '1',
+    caption: '1'
   },
   {
     src: require('./imgs/2.jpg'),
-    altText: 'Flor 2 esta bonita',
-    caption: 'el ppe'
+    altText: '2',
+    caption: '2'
   },
   {
     src: require('./imgs/3.jpg'),
-    altText: 'Flor 3',
-    caption: 'Ayy miguel'
+    altText: '3',
+    caption: '3'
   }
 ];
 

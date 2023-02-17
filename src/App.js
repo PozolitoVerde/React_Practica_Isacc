@@ -2,18 +2,50 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import img from "./imgs/foto.jpeg";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import Carrusel from "./carrusel";
 import GoogleMap from './mapsAPI'
 import pdf from './files/cv.pdf';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCode, faFileLines, faGraduationCap, faHome, faImage, faLocationDot, faPen, faSchool, faUser } from '@fortawesome/free-solid-svg-icons'
+
+import { faCode, faFileLines, faGraduationCap, faHome, faImage, faLocationDot, faPen, faSchool, faUser } from '@fortawesome/free-solid-svg-icons'
 
 
 
 function Home() {
   return (
     <div className="home-wrapper">
-      <h1 className="home">Home</h1>
+      {/* <h1 className="home">Home</h1> */}
+      <Card style={{ width: '18rem' }} className="card">
+      <Card.Body>
+        <Card.Title>Metodo render</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
+        <Card.Text>
+          Técnica para compartir código entre componentes en React utilizando una propiedad cuyo valor es una función. Un componente con una render prop toma una función que devuelve un elemento de React y lo llama en lugar de implementar su propia lógica de representación.
+        </Card.Text>
+        
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>Metodo Strick Mode</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
+        <Card.Text>
+          El modo estricto simplifica el modo en que el nombre de una variable es asignado a un variable particular en el código. Muchas optimizaciones del compilador se basan en la habilidad para decir el lugar específico en que una variable está almacenada, lo cual es crítico para una optimización completa del código JavaScript.
+        </Card.Text>
+        
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>Metodo Return</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
+        <Card.Text>
+          La sentencia return se emplea para salir de la secuencia de ejecución de las sentencias de un método y, opcionalmente, devolver un valor. Tras la salida del método se vuelve a la secuencia de ejecución del programa al lugar de llamada de dicho método.
+        </Card.Text>
+        
+      </Card.Body>
+    </Card>
     </div>
   );
 }
@@ -48,7 +80,7 @@ function Logo() {
 function Foto() {
   return(
   <div className="wrapper-center">
-    <h2 style={{alignSelf: 'end', marginBottom: '4rem'}}>Hola, busco empleo</h2>
+    <h2 style={{alignSelf: 'end', marginBottom: '4rem'}}>Hola Mundo por Siempre!!!!!</h2>
     <img alt="Perfil" className="fotopro" src={img} style={{alignSelf: 'start'}}></img>
   </div>
   )
@@ -75,24 +107,17 @@ function App() {
   }
   return (
     <div className="app">
-      <nav className={`${nav ? 'nav-open' : 'nav-collapsed'}`}>
-        <button className="nav-toggle" onClick={navToggle}><FontAwesomeIcon icon={faBars} /></button>
+        <nav className={`${nav ? 'nav-open' : 'nav-collapsed'}`}>  
+        
         <ul>
           {
             links.map(link =>(
-              <li key={link[0]}><Link to={link[0] === 'Home' ? '/' : link[0].toLowerCase()}><FontAwesomeIcon className="hash" icon={link[1]}></FontAwesomeIcon><span className="nav-link-style">{link[0]}</span></Link></li>
+              <Button variant="light"><li key={link[0]}><Link to={link[0] === 'Home' ? '/' : link[0].toLowerCase()}><span className="nav-link-style">{link[0]}</span></Link></li></Button>
             ))
           }
         </ul>
-      </nav>
-      {/* <div className="btn-group">
-         <Link to="/Inicio" className="btn btn-dark">
-          INICIO
-          </Link>
-          <Link to="/Alumno" className="btn btn-dark">
-          ALUMNO
-         </Link>      
-        </div> */}
+       </nav> 
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nombre" element={<Nombre />} />

@@ -1,5 +1,5 @@
 {
-  "name": "viernes_10_gonzalez_2",
+  "name": "react_practica_isaac",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +20,8 @@
     "reactstrap": "^9.1.5",
     "web-vitals": "^2.1.4"
   },
+
+  "homepage": "https://hackerutd.online/renteria",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

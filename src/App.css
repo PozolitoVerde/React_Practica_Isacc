@@ -25,127 +25,43 @@ ul{
   padding-left: 0 !important;
 }
 
-
-nav{
-  position: fixed;
-  background-color: #202020;
-  display: grid;
-  gap: 2rem;
-  place-content: center;
-  z-index: 99;
-  transition: all 0.5s ease;
-  padding-top: 2rem;
-}
 nav ul{
-  list-style-type: none;
+  list-style: none;
   font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  margin-top: .5rem;
 }
-nav li{
-  margin-block: 1rem;
-  height: 3rem;
-}
-nav a{
+ nav button{
+  margin: auto;
+ }
+
+ nav a{
   text-decoration: none;
-  font-size: 1.5rem;
-}
-
-nav a:hover > .hash{
-  animation: list-hover 2s ease-out forwards;
-}
-nav a:hover > .nav-link-style::after{
-  transform-origin: left;
-  scale: 1;
-}
-
-@keyframes list-hover {
-  0%{
-    color: #fff;
-    
-    text-shadow: 0 0 1rem #ffffff50;
-  }
-  100%{
-    color: #ffffff50;
-  }
-}
-
-nav a .hash{
-  color: #ffffff50;
-  margin-inline-end: 1.5rem;
-  margin-inline-start: -0.5rem;
-  height: 1.5rem;
-  aspect-ratio: 1;
-
-}
-.nav-link-style{
-  color: #ffffff50;
-  display: inline-block;
-  width: fit-content;
-  transition: color 0.6s cubic-bezier(0, 0, 0.19, 1.29), opacity 0.3s ease;
-  animation: appear 0.5s ease forwards;
-}
-nav a:hover .nav-link-style{
-  color: #fff;
-}
-.nav-link-style::after{
-  content: "";
-  height: 0.2rem;
-  border-radius: 0.5rem;
-  width: 100%;
-  display: block;
-  background-color: #fff;
-  margin-top: 0.2rem;
-  scale: 0 1;
-  transition: scale 0.2s ease;
-  transform-origin: right;
-}
-.nav-open{
-  inset: 0 82% 0 0;
-}
-.nav-collapsed{
-  inset: 0 93% 0 0;
-}
-.nav-collapsed .nav-link-style{
-  display: none;
-}
-.nav-collapsed .hash{
-  margin-inline: 0.3rem auto;
-}
-.nav-toggle{
-  background-color: transparent;
-  border: none;
-}
-.nav-toggle svg{
-  color: #ffffff50;
-  font-size: 2.5rem;
-}
-.nav-toggle svg:hover{
-  animation: list-hover 3s ease-out forwards;
-}
-@keyframes appear {
-  0%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-    display: inline-block;
-  }
-}
+  color: #000000;
+ }
 
 
 .home-wrapper{
-  background-color: #000000;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+
+}
+
+.card{
+  color: #000000;
+  margin: auto;
 }
 .nombre-wrapper{
-  background-color: #16425B;
+  background-color: #fff;
+  
 }
 .utd-wrapper{
-  background-color: hsl(163, 36%, 41%);
+  background-color: #fff;
 }
 .carrera-wrapper{
-  background-color: darkblue;
+  background-color: #fff;
 }
 
 h1{
@@ -154,84 +70,56 @@ h1{
   font-size: 8rem !important;
   text-transform:uppercase;
   position:relative;
-  color: hsl(0, 0%, 50%);
-}
-h1:before{
-  content:"";
-  position:absolute;
-  color: hsl(0, 0%, 100%);
-  top:0;
-  left:0;
-  width:0%;
-  overflow:hidden;
-  transition:all 0.5s;
-  white-space: nowrap;
-}
-h1:hover:before{
-  width:100%;
+  color: black;
 }
 
-.home:before{
-  content: 'home';
-  color: white;
-}
 .nombre{
   text-align: center;
   font-size: 6rem !important;
-  color: #ffffff50;
+  color: black;
   transition: color 0.5s ease-out;
 }
-.nombre:hover{
-  color: #fff;
-}
+
 .utd{
-  color: hsl(0, 0%, 85%);
+  color: black;
 }
-.utd:before{
-  content: 'UTD';
-  color: hsl(42, 79%, 68%);
-}
+
 .carrera{
   font-size: 5rem !important;
   text-align: center;
-  color: #ffffff50;
+  color: black;
   width: fit-content;
   transition: color 0.5s ease-out;
 }
-.carrera:hover{
-  color: #fff;
-}
+
 
 h2{
   margin-block-end: 8rem;
+  color: #000000;
 }
 .utd-logo{
   width: 50vw;
   padding: 2rem;
   background-color: #f6f6f6;
   border-radius: 0.5rem;
-  transition: scale 0.2s ease;
-}
-.utd-logo:hover{
-  scale: 1.05;
+  
 }
 
+
 .fotopro{
-  height: 13rem;
-  width: 13rem;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 1rem 0.5rem #00000030;
+  height: 20rem;
+  width: 20rem;
+  
+  
 }
-.fotopro:hover{
-  scale: 1.5
-}
-.wrapper-center{
+
+ .wrapper-center{
   height: 100%;
   display: grid;
   padding-inline: 20%;
   place-items: center;
-}
+  background-color: white;
+} 
 .carousel{
   width: 100%;
 }
@@ -241,64 +129,7 @@ h2{
 }
 
 
-/* Responsividad */
-@media (max-width: 1050px) {
-  .nav-open{
-    inset: 0 70% 0 0;
-  }
-  .nav-collapsed{
-    inset: 0 90% 0 0;
-  }
- .home, .utd{
-    font-size:5rem !important;
-  }
-  .nombre{
-    font-size: 4rem !important;
-    width: 80%;
-    margin-inline: auto;
-  }
-  .carrera{
-    font-size: 3rem !important;
-    width: 70%;
-    margin-inline: auto;
-  }
-}
-@media (max-width: 600px){
-  .nav-open{
-    inset: 0 60% 0 0;
-  }
-  .nav-link-style{
-    font-size: 1rem;
-  }
-  .nav-toggle svg{
-    font-size: 1.5rem;
-  }
-  .nav-collapsed .hash{
-    margin-inline-start: 0.1rem;
-  }
-  .hash{
-    height: 1rem !important;
-    width: 1rem;
-  }
-  .nav-collapsed{
-    inset: 0 88% 0 0;
-  }
-  .carrera{
-    font-size: 1.5rem !important;
-    width: 75%;
-    margin-inline: auto;
-  }
-  .nombre{
-    font-size: 2.5rem !important;
-    width: 70%;
-    margin-inline: auto;
-  }
-  .wrapper-center{
-    padding-inline-start: 15%;
-    padding-inline-end: 5%;
 
-  }
-}
 @media (hover: none){
   body{
     overflow: hidden;
