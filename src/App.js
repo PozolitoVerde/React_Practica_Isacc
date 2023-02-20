@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import img from "./imgs/foto.jpeg";
+import mockup from "./imgs/4.jpg";
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -54,7 +55,7 @@ function Nombre() {
   <div className="nombre-wrapper">
     <h1 className="nombre">Renteria Meza Angel Eduardo</h1>
   </div>
-  )
+  );
 }
 function UTD() {
   return(
@@ -96,9 +97,18 @@ function Alumnos() {
   )
 }
 
+function Mockup() {
+  return(
+  <div className="wrapper-center">
+    <h2 style={{alignSelf: 'end', marginBottom: '4rem'}}>Cultive Care</h2>
+    <img alt="Perfil" className="fotopro2" src={mockup} style={{alignSelf: 'start'}}></img>
+  </div>
+  )
+}
+
 function App() {
 
-  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage]]
+  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage], ['Mockup', faImage]]
 
   const [nav, setNav] = useState(false)
 
@@ -128,6 +138,7 @@ function App() {
         <Route path="/alumnos" element={<Alumnos />} />
         <Route path="/galeria" element={<Carrusel />} />
         <Route path="/mapa" element={<GoogleMap />} />
+        <Route path="/mockups" element={<Mockup />} />
       </Routes>
     </div>
   );
