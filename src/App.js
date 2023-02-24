@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card';
 import Carrusel from "./carrusel";
 import GoogleMap from './mapsAPI'
 import pdf from './files/cv.pdf';
+import Login from "./Login";
 
 import { faCode, faFileLines, faGraduationCap, faHome, faImage, faLocationDot, faPen, faSchool, faUser } from '@fortawesome/free-solid-svg-icons'
 
@@ -105,10 +106,18 @@ function Mockup() {
   </div>
   )
 }
+// function Login () {
+//   return(
+//     <div>
+//       <h2>Hola profe</h2>
+//     </div>
+    
+//   )
+// }
 
 function App() {
 
-  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage], ['Mockup', faImage]]
+  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage], ['Mockup', faImage], ['Login', faHome]]
 
   const [nav, setNav] = useState(false)
 
@@ -139,6 +148,7 @@ function App() {
         <Route path="/galeria" element={<Carrusel />} />
         <Route path="/mapa" element={<GoogleMap />} />
         <Route path="/mockups" element={<Mockup />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
   );
