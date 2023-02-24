@@ -9,6 +9,7 @@ import Carrusel from "./carrusel";
 import GoogleMap from './mapsAPI'
 import pdf from './files/cv.pdf';
 import Login from "./Login";
+import Logout from "./Logout";
 
 import { faCode, faFileLines, faGraduationCap, faHome, faImage, faLocationDot, faPen, faSchool, faUser } from '@fortawesome/free-solid-svg-icons'
 
@@ -117,7 +118,7 @@ function Mockup() {
 
 function App() {
 
-  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage], ['Mockup', faImage], ['Login', faHome]]
+  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage], ['Mockup', faImage], ['Login', faHome],['Logout', faHome]]
 
   const [nav, setNav] = useState(false)
 
@@ -149,6 +150,7 @@ function App() {
         <Route path="/mapa" element={<GoogleMap />} />
         <Route path="/mockup" element={<Mockup />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Logout" element={<Logout />}/>
       </Routes>
     </div>
   );
