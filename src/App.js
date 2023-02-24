@@ -147,7 +147,7 @@ function App() {
         <Route path="/alumnos" element={<Alumnos />} />
         <Route path="/galeria" element={<Carrusel />} />
         <Route path="/mapa" element={<GoogleMap />} />
-        <Route path="/mockups" element={<Mockup />} />
+        <Route path="/mockup" element={<Mockup />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
