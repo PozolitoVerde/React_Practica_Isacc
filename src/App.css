@@ -139,3 +139,7 @@ h2{
     overflow: hidden;
   }
 }
+
+.center{
+  text-align: center;
+}
