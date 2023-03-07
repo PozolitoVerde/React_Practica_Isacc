@@ -10,6 +10,8 @@ import GoogleMap from './mapsAPI'
 import pdf from './files/cv.pdf';
 import Login from "./Login";
 import Logout from "./Logout";
+import img_log from './imgs/Login.PNG';
+import invernadero from './imgs/invernadero.png';
 
 import { faCode, faFileLines, faGraduationCap, faHome, faImage, faLocationDot, faPen, faSchool, faUser } from '@fortawesome/free-solid-svg-icons'
 
@@ -107,18 +109,22 @@ function Mockup() {
   </div>
   )
 }
-// function Login () {
-//   return(
-//     <div>
-//       <h2>Hola profe</h2>
-//     </div>
-    
-//   )
-// }
+
+function Integradora () {
+  return(
+    <div className="wrapper-center">
+      <h2>Avances Integradora</h2>
+      <div className="fotos">
+        <img className="login" src={img_log}></img>
+        <img className="invernadero" src={invernadero}></img>
+      </div>
+    </div>
+  );
+}
 
 function App() {
 
-  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage], ['Mockup', faImage], ['Login', faHome],['Logout', faHome]]
+  const links = [['Home', faHome], ['Nombre', faPen], ['UTD', faSchool], ['Carrera', faCode], ['Logo', faGraduationCap], ['Foto', faUser], ['Alumnos', faFileLines], ['Mapa', faLocationDot], ['Galeria', faImage], ['Mockup', faImage], ['Login', faHome],['Logout', faHome], ['Integradora', faHome]]
 
   const [nav, setNav] = useState(false)
 
@@ -151,6 +157,7 @@ function App() {
         <Route path="/mockup" element={<Mockup />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Logout" element={<Logout />}/>
+        <Route path="/Integradora" element={<Integradora />}/>
       </Routes>
     </div>
   );

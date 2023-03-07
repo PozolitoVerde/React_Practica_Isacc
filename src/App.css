@@ -152,3 +152,18 @@ h2{
   width: 30rem;
   
 }
+
+.invernadero {
+  height: 500px;
+  width: 300px;
+  margin-left: 50px;
+}
+
+.fotos{
+  display: flex;
+}
+
+.login{
+  width: 75%;
+  height: 100%;
+}
