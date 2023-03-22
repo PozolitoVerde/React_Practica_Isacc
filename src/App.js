@@ -19,6 +19,7 @@ import { faCode, faFileLines, faGraduationCap, faHome, faImage, faLocationDot, f
 
 function Home() {
   return (
+    <div>
     <div className="home-wrapper">
       {/* <h1 className="home">Home</h1> */}
       <Card style={{ width: '18rem' }} className="card">
@@ -50,8 +51,22 @@ function Home() {
         </Card.Text>
         
       </Card.Body>
+
+      
     </Card>
+    
+   
     </div>
+    <div className="btngithub">
+    <a href="https://github.com/PozolitoVerde">
+      <Button
+      
+      >
+        Github
+      </Button>
+    </a>
+    </div>
+     </div>
   );
 }
 function Nombre() {

@@ -46,7 +46,14 @@ nav ul{
   background-color: white;
   display: flex;
   justify-content: center;
+  height: 75vh;
 
+}
+.btngithub{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: -200px;
 }
 
 .card{
